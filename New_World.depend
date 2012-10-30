@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1351609866 source:d:\c++\new_world\main.cpp
+	<SFML/Window.hpp>
+	"CGame.hpp"
+
+1351609866 d:\c++\new_world\cgame.hpp
+	<SFML/Graphics.hpp>
+	<SFML/System.hpp>
+
+1351608732 source:d:\c++\new_world\cgame.cpp
+	"CGame.hpp"
+

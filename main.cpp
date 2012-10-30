@@ -1,3 +1,4 @@
+#include <SFML/Window.hpp>
 #include"CGame.hpp"
 
 int main(int argc,char* argv[])
