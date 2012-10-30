@@ -25,8 +25,13 @@ void CGame::Run()
 }
 void CGame::Rysuj()
 {
-    (*m_okno_glowne).clear();
-    //tu bedzie sie odbywalo rysowanie
+    (*m_okno_glowne).clear(sf::Color(0,125,0,255));
+    sf::VertexArray triangle(sf::Triangles,3);
+    triangle[0].position=sf::Vector2f(0,200);
+    triangle[1].position=sf::Vector2f(600,400);
+    triangle[2].position=sf::Vector2f(300,0);
+    (*m_okno_glowne).draw(triangle);
+
     (*m_okno_glowne).display();
 }
 void CGame::ObslugaZdarzen()
@@ -40,18 +45,14 @@ void CGame::ObslugaZdarzen()
             is_done=true;
             (*m_okno_glowne).close();
             break;
-        } else if(zdarzenie.type==sf::Event::Resized)
-        {
-            ZmienRozdzielczosc(zdarzenie.size.width,zdarzenie.size.height);
-        }
+        } if (zdarzenie.type == sf::Event::Resized)
+         ZmienRozdzielczosc(zdarzenie.size.width, zdarzenie.size.height);
     }
 }
 void CGame::ZmienRozdzielczosc(size_t szerokosc,size_t wysokosc)
 {
-    sf::Vector2u rozdzielczosc;
-    rozdzielczosc.x=szerokosc;
-    rozdzielczosc.y=wysokosc;
-    (*m_okno_glowne).setSize(rozdzielczosc);
+    (*m_okno_glowne).setSize(sf::Vector2u(szerokosc,wysokosc));
+    (*m_okno_glowne).create(sf::VideoMode(szerokosc,wysokosc),"New World");
 }
 CGame::CGame(size_t okno_szerokosc,size_t okno_wysokosc,bool fullscreen)
 {
