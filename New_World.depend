@@ -3,10 +3,10 @@
 	<SFML/Window.hpp>
 	"CGame.hpp"
 
-1351612248 d:\c++\new_world\cgame.hpp
+1351618046 d:\c++\new_world\cgame.hpp
 	<SFML/Graphics.hpp>
 	<SFML/System.hpp>
 
-1351612463 source:d:\c++\new_world\cgame.cpp
+1351621016 source:d:\c++\new_world\cgame.cpp
 	"CGame.hpp"
 

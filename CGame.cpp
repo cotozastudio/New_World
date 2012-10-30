@@ -53,3 +53,12 @@ void CGame::ZmienRozdzielczosc(size_t szerokosc,size_t wysokosc)
     rozdzielczosc.y=wysokosc;
     (*m_okno_glowne).setSize(rozdzielczosc);
 }
+CGame::CGame(size_t okno_szerokosc,size_t okno_wysokosc,bool fullscreen)
+{
+    m_okno_szerokosc=okno_szerokosc;
+    m_okno_wysokosc=okno_wysokosc;
+    m_fullscreen=fullscreen;
+}
+CGame::~CGame(){}
+
+void CGame::Aktualizuj(double uplyw_czasu){}
