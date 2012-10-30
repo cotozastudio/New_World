@@ -18,7 +18,7 @@ class CGame
     size_t m_okno_wysokosc;
     bool m_fullscreen;
     bool is_done;
-    sf::Window* m_okno_glowne;
+    sf::RenderWindow *m_okno_glowne;
 
 };
 #endif
