@@ -45,8 +45,10 @@ void CGame::ObslugaZdarzen()
             is_done=true;
             (*m_okno_glowne).close();
             break;
-        } if (zdarzenie.type == sf::Event::Resized)
+        }else if (zdarzenie.type == sf::Event::Resized)
+        {
          ZmienRozdzielczosc(zdarzenie.size.width, zdarzenie.size.height);
+        }
     }
 }
 void CGame::ZmienRozdzielczosc(size_t szerokosc,size_t wysokosc)

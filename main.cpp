@@ -1,5 +1,6 @@
 #include <SFML/Window.hpp>
 #include"CGame.hpp"
+#include"SpriteConfig.hpp"
 
 int main(int argc,char* argv[])
 {
